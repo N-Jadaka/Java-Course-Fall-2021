@@ -28,19 +28,21 @@ public class GradeBook {
     public String toString(){
         String charCap ="";
         for(int i = 0; i < scoresSize; i++) {
-            charCap += scores[i] + "";
+            charCap += scores[i] + " ";
         }
-        System.out.println(charCap);
         return charCap; 
     }
 
-    public boolean addScore(double score) {
-        if (scoresSize < scores.length) {
-            scores[scoresSize] = score;
-            scoresSize++;
-            return true;
-        } else
-            return false;
+    public boolean addScore(double score)
+    {
+       if (scoresSize < scores.length)
+       {
+          scores[scoresSize] = score;
+          scoresSize++;
+          return true;
+       }
+       else
+          return false;      
     }
 
     /**
